@@ -1,0 +1,108 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<section class="padding-md">
+	<div class="container overflow">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="step text-center ng-binding">Step 1 of 3
+					<div class="progress">
+						<div style="width: 33%" class="progress-bar"></div>
+					</div>
+				</div>
+				<!-- STEP 1-->
+				<div class="step1 text-center">
+					<h1 class="padding-xs">Sign our Non-Disclosure Agreement</h1>
+					<form name="step1" novalidate="novalidate" autocomplete="off" class="">
+						<p class="lead gray-black">The confidentiality of your project is important to us.<br>By clicking accept, both you, and your company and<br>Hack Logica are agreeing to terms of an NDA to protect<br>all parties and materials disclosed.<br>To read all terms, &nbsp;<a href="" class="black-underline">click here</a>.</p>
+						<div class="padding-xs">
+							<!-- <div ng-class="{'has-error': !signupForm.agreeNDA.good &amp;&amp; step1.submitted}" class="checkbox">
+								<input type="checkbox" name="nda" id="nda" ng-model="signupForm.agreeNDA.value" ng-change="signupOnBlur('agreeNDA')" class="ng-pristine ng-valid">
+								<label for="nda">I Agree to terms of the NDA</label>
+							</div> -->
+							<div class="checkbox">
+								<input type="checkbox" name="nda" id="nda" class="no-float">
+								<label for="nda">I Agree to terms of the NDA</label>
+							</div>
+						</div>
+						<div class="padding-xs">
+						<!-- 	<button ng-click="step(2)" class="btn btn-primary fat ng-binding">Skip<i class="gf-angle-right"></i></button> -->
+							<button class="btn btn-primary fat ng-binding">Skip<i class="gf-angle-right"></i></button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- STEP 2-->
+		<div class="row step2">
+			<div class="col-sm-8 col-sm-push-2">
+				<!-- <div ng-controller="CreateGigCtrl" ng-include="'partials/templates/createGig'" hasprevious="true" class="ng-scope"> -->
+				<div hasprevious="true">
+					<h1 class="padding-xs text-center">Tell us about your project</h1>
+					<form name="createGig" novalidate="novalidate" autocomplete="off">
+						<!-- <div ng-class="{'has-error': signupForm.what.err}" class="form-group">
+							<label for="name">Project name<p class="error-block pull-right ng-binding"></p></label>
+							<input type="text" placeholder="What is your project name." name="name" ng-model="signupForm.what.value" ng-blur="signupOnBlur('name')" required="required" class="form-control ng-pristine ng-invalid ng-invalid-required">
+						</div> -->
+						<div class="form-group">
+							<label for="name">Project name<p class="error-block pull-right"></p></label>
+							<input type="text" placeholder="What is your project name." name="name" required="required" class="form-control">
+						</div>
+						<!-- <div ng-class="{'has-error': signupForm.budget.err}" class="form-group"> -->
+						<div class="form-group">
+							<label for="budget">Budget<p class="error-block pull-right"></p></label>
+							<div class="select">
+								<select class="form-control">
+									<option value="" disabled selected>Select a budget range.</option>
+									<option value="option-1">$1k - $2k</option>
+	      							<option value="option-2">$2k - $5k</option>
+	      							<option value="option-2">$5k - $10k</option>
+	      							<option value="option-2">$10k - $20k</option>
+	      							<option value="option-2">$20k+</option>
+								</select>
+							</div>
+						</div>
+						<!-- <div ng-class="{'has-error': signupForm.timeline.err}" class="form-group"> -->
+						<div class="form-group">
+							<label for="timeline">When do you want us to start<p class="error-block pull-right"></p></label>
+							<div class="select">
+								<select class="form-control">
+									<option value="" disabled selected>Select your start timeline.</option>
+									<option value="option-1">Now!</option>
+	      							<option value="option-2">1 week</option>
+	      							<option value="option-2">2 weeks</option>
+	      							<option value="option-2">1 month</option>
+	      							<option value="option-2">2 months</option>
+								</select>
+							</div>
+						</div>
+						<!-- <div ng-class="{'has-error': signupForm.platforms.err}" class="form-group"> -->
+						<div class="form-group">
+							<label for="platform">Platforms<p class="error-block pull-right"></p></label>
+							<div class="select">
+								<select class="form-control">
+									<option value="" disabled selected>Select platforms to build for.</option>
+									<option value="option-1">Web</option>
+	      							<option value="option-2">iOS</option>
+	      							<option value="option-2">Android</option>
+								</select>
+							</div>
+						</div>
+						<footer class="row">
+							<div class="col-xs-6 text-right col-xs-push-6">
+								<!-- <button ng-click="next()" ng-class="{'disabled': !(canGoForward())}" class="btn fat btn-primary ng-binding disabled">Next<i class="gf-angle-right"></i></button> -->
+								<button class="btn fat btn-primary">Next<i class="gf-angle-right"></i></button>
+							</div>
+							<div class="col-xs-6 text-left col-xs-pull-6">
+								<!-- <button ng-click="previous()" ng-if="hasPrevious" class="btn fat none ng-scope"><i class="gf-angle-left"></i>Previous</button> -->
+								<button class="btn fat none ng-scope"><i class="gf-angle-left"></i>Previous</button>
+							</div>
+						</footer>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+		<!-- STEP 3-->
+		<!-- <div ng-show="currentStep === 3" class="row step3 ng-hide"><div class="col-sm-8 col-sm-push-2"><h1 class="padding-xs text-center">Create your account</h1><form name="step3" novalidate="novalidate" autocomplete="off" class="ng-pristine ng-invalid ng-invalid-required"><div ng-class="{'has-error': signupForm.email.err}" class="form-group"><label for="name">Email<p class="error-block pull-right ng-binding"></p></label><input type="text" placeholder="Enter email address" name="name" ng-model="signupForm.email.value" ng-blur="signupOnBlur('email')" required="required" class="form-control ng-pristine ng-invalid ng-invalid-required"></div><div ng-class="{'has-error': signupForm.pass.err}" class="form-group"><label for="password">Password<p class="error-block pull-right ng-binding"></p></label><input type="password" placeholder="•••••••••••" name="password" ng-model="signupForm.pass.value" ng-blur="signupOnBlur('pass')" required="required" class="form-control ng-pristine ng-invalid ng-invalid-required"></div><footer class="row"><div class="col-md-9 col-md-push-3 finish"><button ng-click="step(4)" ng-class="{'disabled': !(canGoToStep(4))}" class="btn fat-mini btn-primary disabled">Contact me later</button><label class="or text-center">OR</label><button ng-click="step(5)" ng-class="{'disabled': !(canGoToStep(5))}" class="btn fat-mini btn-primary disabled">Chat with gigster now</button></div><div class="col-md-3 col-md-pull-9 text-left"><button ng-click="step(2)" class="btn fat-mini none"><i class="gf-angle-left"></i>Previous</button></div></footer></form></div></div><div ng-show="currentStep === 4" class="row ng-hide"><div class="col-sm-10 col-sm-push-1 text-center"><h1>Welcome to Gigster. <br> We'll be in touch soon.</h1><div class="padding-sm"><img src="media/svg/characters.svg" class="max-width-100"></div></div></div></div></section> -->
