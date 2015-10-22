@@ -15,11 +15,9 @@
 .navbar {
     transition: border-image .4s ease;
     padding-top: 25px;
-    background: rgba(255,255,255,.95);
-    border-image: rgba(255,255,255,0);
-    border-width: 0 0 8px;
+    background: transparent;
     background-clip: padding-box;
-    border-color: rgba(255,255,255,.95);
+    border: none;
 }
 .browsehappy {
     margin: 0.2em 0;
@@ -73,6 +71,15 @@ a {
     background-color: transparent;
     color: #1f7edd;
     text-decoration: none;
+}
+.btn {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .125em;
+    text-transform: uppercase;
+    text-transform: uppercase;
+    padding: 20px;
+    border-width: 2px;
 }
 // injector
 @import 'account/login/login.less';

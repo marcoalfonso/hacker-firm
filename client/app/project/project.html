@@ -2,15 +2,15 @@
 
 <section class="padding-md">
 	<div class="container overflow">
-		<div class="row">
+		<div  class="row">
 			<div class="col-xs-12">
-				<div class="step text-center ng-binding">Step 1 of 3
+				<div class="step text-center ng-binding">Step {{transactionStep}} of 3
 					<div class="progress">
-						<div style="width: 33%" class="progress-bar"></div>
+						<div ng-style="{ 'width': transactionWidth}" class="progress-bar"></div>
 					</div>
 				</div>
 				<!-- STEP 1-->
-				<div class="step1 text-center">
+				<div ng-if="!showStep2" class="step1 text-center">
 					<h1 class="padding-xs">Sign our Non-Disclosure Agreement</h1>
 					<form name="step1" novalidate="novalidate" autocomplete="off" class="">
 						<p class="lead gray-black">The confidentiality of your project is important to us.<br>By clicking accept, both you, and your company and<br>Hack Logica are agreeing to terms of an NDA to protect<br>all parties and materials disclosed.<br>To read all terms, &nbsp;<a href="" class="black-underline">click here</a>.</p>
@@ -20,20 +20,21 @@
 								<label for="nda">I Agree to terms of the NDA</label>
 							</div> -->
 							<div class="checkbox">
-								<input type="checkbox" name="nda" id="nda" class="no-float">
+								<input type="checkbox" name="nda" id="nda" class="no-float" ng-click="activateNextButton()">
 								<label for="nda">I Agree to terms of the NDA</label>
 							</div>
 						</div>
 						<div class="padding-xs">
 						<!-- 	<button ng-click="step(2)" class="btn btn-primary fat ng-binding">Skip<i class="gf-angle-right"></i></button> -->
-							<button class="btn btn-primary fat ng-binding">Skip<i class="gf-angle-right"></i></button>
+							<button class="btn btn-primary fat ng-binding" ng-click="activateNextStep()" ng-if="!showNextButton">Skip<i class="gf-angle-right"></i></button>
+							<button class="btn btn-primary fat ng-binding" ng-click="activateNextStep()" ng-if="showNextButton" ng-click="">Next<i class="gf-angle-right"></i></button>
 						</div>
 					</form>
 				</div>
 			</div>
 		</div>
 		<!-- STEP 2-->
-		<div class="row step2">
+		<div ng-if="showStep2" class="row step2">
 			<div class="col-sm-8 col-sm-push-2">
 				<!-- <div ng-controller="CreateGigCtrl" ng-include="'partials/templates/createGig'" hasprevious="true" class="ng-scope"> -->
 				<div hasprevious="true">
@@ -94,7 +95,7 @@
 							</div>
 							<div class="col-xs-6 text-left col-xs-pull-6">
 								<!-- <button ng-click="previous()" ng-if="hasPrevious" class="btn fat none ng-scope"><i class="gf-angle-left"></i>Previous</button> -->
-								<button class="btn fat none ng-scope"><i class="gf-angle-left"></i>Previous</button>
+								<button ng-click="showStep1()" class="btn fat none ng-scope"><i class="fa fa-angle-left"></i>Previous</button>
 							</div>
 						</footer>
 					</form>

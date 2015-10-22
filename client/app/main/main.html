@@ -1,19 +1,21 @@
+<div id="particles-js" class="particleJs"></div>
+
 <div ng-include="'components/navbar/navbar.html'"></div>
 
 <div class="container overflow index-hero">
   <div class="row hero">
-    <div class="col-md-8">
-      <h1>Hire an elite development team in minutes</h1>
-      <p>Hack Logica connects you with Silicon Valley based product managers and top 5% software developers from our vetted talent pool. Get a guaranteed price quote in minutes.</p>
+    <div class="col-md-8 col-md-push-2">
+      <h1>Get a price quote for your app <br/>in <span class="blue">minutes</span>.</h1>
+      <p>Hire our elite design and development team in <span class="blue">minutes</span>.<br/><span class="blue">H</span>ack <span class="blue">L</span>ogica is your connection to the top product managers and top <span class="blue">5%</span> software developers from our talent pool.</p>
       <a href="javascript:" ng-click="projectStart()" class="btn btn-primary btn-lg">Start a project</a>
     </div>
-    <div class="col-md-4 hidden-sm hidden-xs">
+    <!-- <div class="col-md-4 hidden-sm hidden-xs">
       <carousel interval="myInterval">
         <slide ng-repeat="slide in slides" active="slide.active">
           <img ng-src="{{slide.image}}">
         </slide>
       </carousel>
-    </div>
+    </div> -->
   </div>
   <div class="row arrow">
     <a href="#intro">
@@ -68,3 +70,8 @@
 </div>
 
 <div ng-include="'components/footer/footer.html'"></div>
+<script>
+  particlesJS.load('particles-js', 'assets/particles.json', function() {
+    console.log('callback - particles.js config loaded');
+  });
+</script>
