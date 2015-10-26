@@ -108,7 +108,7 @@ module.exports = function (grunt) {
           
           '!{.tmp,<%= yeoman.client %>}{app,components}/**/*.spec.js',
           '!{.tmp,<%= yeoman.client %>}/{app,components}/**/*.mock.js',
-          '<%= yeoman.client %>/assets/images/{,*//*}*.{png,jpg,jpeg,gif,webp,svg}'
+          '<%= yeoman.client %>/assets/images/{,*//*}*.{png,jpg,jpeg,gif,webp,svg,json}'
         ],
         options: {
           livereload: true
@@ -245,6 +245,7 @@ module.exports = function (grunt) {
             '<%= yeoman.dist %>/public/assets/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg,json}',
             '<%= yeoman.dist %>/public/assets/fonts/*',
             '!<%= yeoman.dist %>/public/bower_components/particles.js',
+            '<%= yeoman.dist %>/public/assets/images/particles.json',
             '<%= yeoman.dist %>/public/bower_components/particles.js/{,*/}*.js',
           ]
         }
