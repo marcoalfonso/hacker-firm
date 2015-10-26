@@ -267,7 +267,7 @@ angular.module('hackLogicaApp').config(["$stateProvider", function ($stateProvid
 
 'use strict';
 
-angular.module('hackLogicaApp').controller('ProjectCtrl', ["$scope", "$http", "socket", function ($scope, $http, socket) {
+angular.module('hackLogicaApp').controller('ProjectCtrl', ["$scope", function ($scope) {
   $scope.showStep2 = false;
   $scope.showNextButton = false;
   $scope.transactionStep = 1;
@@ -470,7 +470,7 @@ angular.module('hackLogicaApp').factory('User', ["$resource", function ($resourc
 
 'use strict';
 
-angular.module('hackLogicaApp').controller('FooterCtrl', ["$scope", function ($scope) {}]);
+angular.module('hackLogicaApp').controller('FooterCtrl', function () {});
 //# sourceMappingURL=footer.controller.js.map
 
 'use strict';

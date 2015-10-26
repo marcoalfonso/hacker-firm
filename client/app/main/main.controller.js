@@ -26,7 +26,7 @@ angular.module('hackLogicaApp').controller('MainCtrl', function ($scope, $http, 
 
     $scope.projectStart = function(){
       $state.go('project');
-    }
+    };
 
     $scope.myInterval = 5000;
     $scope.slides = [

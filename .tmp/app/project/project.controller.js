@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('hackLogicaApp').controller('ProjectCtrl', function ($scope, $http, socket) {
+angular.module('hackLogicaApp').controller('ProjectCtrl', function ($scope) {
   $scope.showStep2 = false;
   $scope.showNextButton = false;
   $scope.transactionStep = 1;
