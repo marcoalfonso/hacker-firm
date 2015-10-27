@@ -1,12 +1,3 @@
-/**
- * Using Rails-like standard naming convention for endpoints.
- * GET     /projects              ->  index
- * POST    /projects              ->  create
- * GET     /projects/:id          ->  show
- * PUT     /projects/:id          ->  update
- * DELETE  /projects/:id          ->  destroy
- */
-
 'use strict';
 
 var _ = require('lodash');
@@ -51,7 +42,7 @@ exports.update = function(req, res) {
   });
 };
 
-// Deletes a thing from the DB.
+// Deletes a project from the DB.
 exports.destroy = function(req, res) {
   Project.findById(req.params.id, function (err, project) {
     if(err) { return handleError(res, err); }
