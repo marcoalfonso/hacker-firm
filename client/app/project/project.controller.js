@@ -39,8 +39,9 @@ angular.module('hackLogicaApp').controller('ProjectCtrl',
         startTime: $scope.project.startTime,
         platforms: $scope.project.platforms
       }).then( function(response) {
-        $scope.project_id = response.data._id;
+
         var project_id = response.data._id;
+
         Auth.createUser({
           name: $scope.user.name,
           email: $scope.user.email,
@@ -48,7 +49,7 @@ angular.module('hackLogicaApp').controller('ProjectCtrl',
           project_id: project_id
         })
         .then( function() {
-          // Account created, redirect to home
+          // Account created, redirect to chat
           $state.go('chat', {id: project_id});
         })
         .catch( function(err) {
