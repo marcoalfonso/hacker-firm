@@ -18,7 +18,7 @@ var UserSchema = new Schema({
   salt: String,
   facebook: {},
   github: {},
-  project_id: ObjectId
+  projectId: ObjectId
 });
 
 /**

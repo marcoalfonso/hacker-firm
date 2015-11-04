@@ -2,6 +2,13 @@
 
 var _ = require('lodash');
 var Project = require('./project.model');
+var sendgrid  = require('sendgrid')(process.env.SENGRID_API_KEY);
+var email     = new sendgrid.Email({
+  to:       'marcoalfonso@gmail.com',
+  from:     'you@yourself.com',
+  subject:  'Subject goes here',
+  text:     'Hello world'
+});
 
 // Get list of projects
 exports.index = function(req, res) {
@@ -25,6 +32,10 @@ exports.create = function(req, res) {
   Project.create(req.body, function(err, project) {
     if(err) { return handleError(res, err); }
     return res.status(201).json(project);
+  });
+  sendgrid.send(email, function(err, json) {
+    if (err) { return console.error(err); }
+    console.log(json);
   });
 };
 

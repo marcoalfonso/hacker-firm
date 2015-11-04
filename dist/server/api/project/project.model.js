@@ -6,7 +6,11 @@ var mongoose = require('mongoose'),
 var ProjectSchema = new Schema({
   name: String,
   info: String,
-  active: Boolean
+  budget: String,
+  startTime: String,
+  platforms: String,
+  active: Boolean,
+  termsAndConditions: Boolean
 });
 
 module.exports = mongoose.model('Project', ProjectSchema);

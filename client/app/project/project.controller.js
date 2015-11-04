@@ -2,13 +2,14 @@
 
 angular.module('hackLogicaApp').controller('ProjectCtrl', 
   function ($scope, Auth, $location, $window, $http, $state) {
+
   $scope.project = {};
-  $scope.project_id = {};
+  $scope.projectId = {};
 	$scope.showStep = 1;
 	$scope.showNextButton = false;
 	$scope.transactionStep = 1;
 
-  var initialTransactionWidth = '33.3%'
+  var initialTransactionWidth = '33.3%';
 
 	$scope.transactionWidth = initialTransactionWidth;
 
@@ -24,7 +25,7 @@ angular.module('hackLogicaApp').controller('ProjectCtrl',
     $scope.transactionStep = step;
     $scope.showStep = step;
     $scope.transactionWidth = parseInt(initialTransactionWidth) * step;
-  }
+  };
 
   $scope.user = {};
   $scope.errors = {};
@@ -40,17 +41,17 @@ angular.module('hackLogicaApp').controller('ProjectCtrl',
         platforms: $scope.project.platforms
       }).then( function(response) {
 
-        var project_id = response.data._id;
+        var projectId = response.data._id;
 
         Auth.createUser({
           name: $scope.user.name,
           email: $scope.user.email,
           password: $scope.user.password,
-          project_id: project_id
+          projectId: projectId
         })
         .then( function() {
           // Account created, redirect to chat
-          $state.go('chat', {id: project_id});
+          $state.go('chat', {id: projectId});
         })
         .catch( function(err) {
           err = err.data;
