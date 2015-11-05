@@ -38,7 +38,9 @@ angular.module('hackLogicaApp').controller('ProjectCtrl',
         name: $scope.project.name,
         budget: $scope.project.budget,
         startTime: $scope.project.startTime,
-        platforms: $scope.project.platforms
+        platforms: $scope.project.platforms,
+        email: $scope.user.email,
+        name: $scope.user.name
       }).then( function(response) {
 
         var projectId = response.data._id;

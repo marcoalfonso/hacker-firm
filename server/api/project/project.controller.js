@@ -3,12 +3,7 @@
 var _ = require('lodash');
 var Project = require('./project.model');
 var sendgrid  = require('sendgrid')(process.env.SENGRID_API_KEY);
-var email     = new sendgrid.Email({
-  to:       'marcoalfonso@gmail.com',
-  from:     'you@yourself.com',
-  subject:  'Subject goes here',
-  text:     'Hello world'
-});
+
 
 // Get list of projects
 exports.index = function(req, res) {
@@ -29,11 +24,23 @@ exports.show = function(req, res) {
 
 // Creates a new project in the DB.
 exports.create = function(req, res) {
+  console.log("REQUEST", req.body);
   Project.create(req.body, function(err, project) {
     if(err) { return handleError(res, err); }
     return res.status(201).json(project);
   });
-  sendgrid.send(email, function(err, json) {
+
+  var welcomeEmail     = new sendgrid.Email({
+    to:       req.body.email,
+    from:     'contact@hacklogica.com',
+    subject:  'Welcome to Hack Logica - Next Steps',
+    text:     ''
+  });
+
+  welcomeEmail.setFilters({"templates": {"settings": {"enabled": 1, "template_id": "a9b91cfe-dc85-43ea-b346-e09e5ba72810"}}});
+  welcomeEmail.addSubstitution(':name', req.body.name);
+
+  sendgrid.send(welcomeEmail, function(err, json) {
     if (err) { return console.error(err); }
     console.log(json);
   });
