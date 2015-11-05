@@ -38,7 +38,7 @@ exports.create = function(req, res) {
   });
 
   welcomeEmail.setFilters({"templates": {"settings": {"enabled": 1, "template_id": "a9b91cfe-dc85-43ea-b346-e09e5ba72810"}}});
-  welcomeEmail.addSubstitution(':name', req.body.name);
+  welcomeEmail.addSubstitution(':name', req.body.username);
 
   sendgrid.send(welcomeEmail, function(err, json) {
     if (err) { return console.error(err); }
