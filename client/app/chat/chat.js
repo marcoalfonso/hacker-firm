@@ -7,6 +7,7 @@ angular.module('hackLogicaApp')
         url: '/chat/:id',
         templateUrl: 'app/chat/chat.html',
         controller: 'ChatCtrl',
+        authenticate: true,
         params: {
         	id: ''
         }

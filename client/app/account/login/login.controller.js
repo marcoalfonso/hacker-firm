@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('hackLogicaApp')
-  .controller('LoginCtrl', function ($scope, Auth, $location, $window) {
+  .controller('LoginCtrl', function ($scope, Auth, $location, $window, User) {
     $scope.user = {};
     $scope.errors = {};
 
@@ -14,8 +14,12 @@ angular.module('hackLogicaApp')
           password: $scope.user.password
         })
         .then( function() {
-          // Logged in, redirect to home
-          $location.path('/');
+          // Logged in, redirect to chat
+          User.get( function(response){
+            var userProjectId = response.projectId
+            $location.path('/chat/' + userProjectId);
+          });          
+          
         })
         .catch( function(err) {
           $scope.errors.other = err.message;

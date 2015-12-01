@@ -24,7 +24,6 @@ exports.show = function(req, res) {
 
 // Creates a new project in the DB.
 exports.create = function(req, res) {
-  console.log("REQUEST", req.body);
   Project.create(req.body, function(err, project) {
     if(err) { return handleError(res, err); }
     return res.status(201).json(project);
@@ -34,13 +33,34 @@ exports.create = function(req, res) {
     to:       req.body.email,
     from:     'contact@hacklogica.com',
     subject:  'Welcome to Hack Logica - Next Steps',
-    text:     ''
+    html: '<h1>Hack Logica</h1>'
   });
 
   welcomeEmail.setFilters({"templates": {"settings": {"enabled": 1, "template_id": "a9b91cfe-dc85-43ea-b346-e09e5ba72810"}}});
   welcomeEmail.addSubstitution(':name', req.body.username);
 
   sendgrid.send(welcomeEmail, function(err, json) {
+    if (err) { return console.error(err); }
+    console.log(json);
+  });
+
+  var projectRequestEmail     = new sendgrid.Email({
+    to:       'marcoalfonso@gmail.com',
+    from:     req.body.email,
+    subject:  'Hack Logica - New Project Request',
+    html: '<h1>Congrats! A new project request</h1>'
+  });
+
+  projectRequestEmail.setFilters({"templates": {"settings": {"enabled": 1, "template_id": "ec6894e5-f9b1-4192-a662-4354bc197b16"}}});
+  projectRequestEmail.addSubstitution(':project_name', req.body.name);
+  projectRequestEmail.addSubstitution(':terms_and_conditions', req.body.termsAndConditions);
+  projectRequestEmail.addSubstitution(':budget', req.body.budget);
+  projectRequestEmail.addSubstitution(':start_time', req.body.startTime);
+  projectRequestEmail.addSubstitution(':platforms', req.body.platforms);
+  projectRequestEmail.addSubstitution(':email', req.body.email);
+  projectRequestEmail.addSubstitution(':username', req.body.username);
+
+  sendgrid.send(projectRequestEmail, function(err, json) {
     if (err) { return console.error(err); }
     console.log(json);
   });
