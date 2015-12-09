@@ -1,49 +1,40 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
 
-<section class="padding-md">
+<section class="padding-md project">
 	<div class="container overflow">
 		<div  class="row">
 			<div class="col-xs-12">
-				<div class="step text-center ng-binding">Step {{transactionStep}} of 3
+				<div class="step text-center ng-binding">Step {{transactionStep}} of 2
 					<div class="progress">
 						<div ng-style="{ 'width': transactionWidth}" class="progress-bar"></div>
 					</div>
 				</div>
 				<!-- STEP 1-->
-				<div ng-if="showStep !== 2 && showStep !== 3" class="step1 text-center">
+				<!-- <div ng-if="showStep !== 2 && showStep !== 3" class="step1 text-center">
 					<h1 class="padding-xs">Sign our Non-Disclosure Agreement</h1>
 					<form name="step1" novalidate="novalidate" autocomplete="off" class="">
 						<p class="lead gray-black">The confidentiality of your project is important to us.<br>By clicking accept, both you, and your company and<br>Hack Logica are agreeing to terms of an NDA to protect<br>all parties and materials disclosed.<br>To read all terms, &nbsp;<a href="" class="black-underline">click here</a>.</p>
 						<div class="padding-xs">
-							<!-- <div ng-class="{'has-error': !signupForm.agreeNDA.good &amp;&amp; step1.submitted}" class="checkbox">
-								<input type="checkbox" name="nda" id="nda" ng-model="signupForm.agreeNDA.value" ng-change="signupOnBlur('agreeNDA')" class="ng-pristine ng-valid">
-								<label for="nda">I Agree to terms of the NDA</label>
-							</div> -->
 							<div class="checkbox">
 								<input type="checkbox" name="nda" id="nda" class="no-float" ng-click="activateNextButton()" ng-model="project.termsAndConditions">
 								<label for="nda">I Agree to terms of the NDA</label>
 							</div>
 						</div>
 						<div class="padding-xs">
-						<!-- 	<button ng-click="step(2)" class="btn btn-primary fat ng-binding">Skip<i class="gf-angle-right"></i></button> -->
 							<button class="btn btn-primary fat ng-binding" ng-click="goToStep(2)" ng-if="!showNextButton">Skip<i class="gf-angle-right"></i></button>
 							<button class="btn btn-primary fat ng-binding" ng-click="goToStep(2)" ng-if="showNextButton" ng-click="">Next<i class="gf-angle-right"></i></button>
 						</div>
 					</form>
-				</div>
+				</div> -->
 			</div>
 		</div>
 		<!-- STEP 2-->
-		<div ng-if="showStep === 2" class="row step2">
+		<div ng-if="showStep === 1" class="row step1">
 			<div class="col-sm-8 col-sm-push-2">
 				<!-- <div ng-controller="CreateGigCtrl" ng-include="'partials/templates/createGig'" hasprevious="true" class="ng-scope"> -->
 				<div hasprevious="true">
 					<h1 class="padding-xs text-center">Tell us about your project</h1>
-					<form name="createGig" novalidate="novalidate" autocomplete="off">
-						<!-- <div ng-class="{'has-error': signupForm.what.err}" class="form-group">
-							<label for="name">Project name<p class="error-block pull-right ng-binding"></p></label>
-							<input type="text" placeholder="What is your project name." name="name" ng-model="signupForm.what.value" ng-blur="signupOnBlur('name')" required="required" class="form-control ng-pristine ng-invalid ng-invalid-required">
-						</div> -->
+					<form name="createProject" novalidate="novalidate" autocomplete="off">
 						<div class="form-group">
 							<label for="name">Project name<p class="error-block pull-right"></p></label>
 							<input type="text" placeholder="What is your project name." name="name" required="required" class="form-control" ng-model="project.name">
@@ -85,24 +76,25 @@
 									<option value="Web">Web</option>
 	      							<option value="iOS">iOS</option>
 	      							<option value="Android">Android</option>
+	      							<option value="Unity">Unity</option>
+	      							<option value="Oculus Rift">Oculus Rift</option>
 								</select>
 							</div>
 						</div>
 						<footer class="row">
 							<div class="col-xs-6 text-right col-xs-push-6">
 								<!-- <button ng-click="next()" ng-class="{'disabled': !(canGoForward())}" class="btn fat btn-primary ng-binding disabled">Next<i class="gf-angle-right"></i></button> -->
-								<button ng-click="goToStep(3)" class="btn fat btn-primary">Next<i class="gf-angle-right"></i></button>
+								<button ng-click="goToStep(2)" class="btn fat btn-primary">Next<i class="gf-angle-right"></i></button>
 							</div>
-							<div class="col-xs-6 text-left col-xs-pull-6">
-								<!-- <button ng-click="previous()" ng-if="hasPrevious" class="btn fat none ng-scope"><i class="gf-angle-left"></i>Previous</button> -->
+							<!-- <div class="col-xs-6 text-left col-xs-pull-6">
 								<button ng-click="goToStep(1)" class="btn fat none ng-scope"><i class="fa fa-angle-left"></i>Previous</button>
-							</div>
+							</div> -->
 						</footer>
 					</form>
 				</div>
 			</div>
 		</div>
-		<div ng-if="showStep === 3" class="row step3">
+		<div ng-if="showStep === 2" class="row step2">
 			<div class="col-sm-8 col-sm-push-2">
 				<div hasprevious="true">
 					<h1 class="padding-xs text-center">Create your account</h1>
@@ -156,7 +148,7 @@
 							</div>
 							<div class="col-xs-6 text-left col-xs-pull-6">
 								<!-- <button ng-click="previous()" ng-if="hasPrevious" class="btn fat none ng-scope"><i class="gf-angle-left"></i>Previous</button> -->
-								<button ng-click="goToStep(2)" class="btn fat none ng-scope"><i class="fa fa-angle-left"></i>Previous</button>
+								<button ng-click="goToStep(1)" class="btn fat none ng-scope"><i class="fa fa-angle-left"></i>Previous</button>
 							</div>
 						</footer>
 				        <!-- <div>
@@ -170,3 +162,5 @@
 		</div>
 	</div>
 </section>
+
+<div ng-include="'components/footer/footer.html'"></div>

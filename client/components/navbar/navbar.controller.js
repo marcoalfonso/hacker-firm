@@ -12,6 +12,17 @@ angular.module('hackLogicaApp')
     $scope.isAdmin = Auth.isAdmin;
     $scope.getCurrentUser = Auth.getCurrentUser;
 
+    /*$scope.notCollapse = function() {
+      if ($scope.isCollapsed === true) {
+        $scope.isCollapsed = false;
+        $scope.navbarMargin = "navbarMargin";
+      } else {
+        $scope.isCollapsed = true;
+        $scope.navbarMargin = "noNavbarMargin";
+      }
+      
+    }*/
+    
     $scope.logout = function() {
       Auth.logout();
       $location.path('/login');

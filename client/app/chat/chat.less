@@ -54,7 +54,7 @@
     color: #161616;
 }
 .project-details h2.small {
-    font-size: 18px;
+    font-size: 18px !important;
 }
 .project-details .card {
     margin-top: 50px;
@@ -147,6 +147,7 @@ img {
     border-top: 0;
     border-left: 0;
     cursor: pointer;
+    border-radius: 6px;
 }
 .card.chat-container .tabs {
     height: 70px;
@@ -221,4 +222,18 @@ img {
 }
 .card.chat-container .chat-box .message.to-me .text {
     background: #f7f7f7;
+}
+.project-details h2 {
+    font-size: 24px;
+    color: #888;
+}
+@media (max-width: 999px) {
+    .card.chat-container {
+        position: relative;
+        top: auto;
+        width: auto;
+        margin-top: 45px;
+        min-height: 700px!important;
+        margin-bottom: 75px;
+    }
 }

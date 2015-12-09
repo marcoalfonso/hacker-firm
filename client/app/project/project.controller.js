@@ -9,7 +9,7 @@ angular.module('hackLogicaApp').controller('ProjectCtrl',
 	$scope.showNextButton = false;
 	$scope.transactionStep = 1;
 
-  var initialTransactionWidth = '33.3%';
+  var initialTransactionWidth = '50%';
 
 	$scope.transactionWidth = initialTransactionWidth;
 

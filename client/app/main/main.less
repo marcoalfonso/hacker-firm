@@ -48,12 +48,13 @@
 }
 .hero .btn.btn-primary {
     color: #fff;
-    border-color: #1f7edd;
-    background: #1f7edd;
+    border-color: #0288bb;
+    background: #0288bb;
 }
 .hero .btn-primary:hover {
-    border-color: #428bca;
-    background: #428bca;
+    border-color: #07a7d8;
+    background: #07a7d8;
+    /*color: #0288bb;*/
 }
 .carousel-indicators {
     bottom: -35px;
@@ -84,6 +85,7 @@
     margin: 25px 0 35px;
     font-size: 60px;
     text-align: center;
+    position: relative;
 }
 .zigzag .read-more {
     margin-left: 5px;
@@ -110,14 +112,11 @@
 .index-hero {
     text-align: center;
 }
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-    color: #ffffff;
-}
 .blue {
-    color: #1f7edd;
+    color: #0288bb;
 }
 .blue:hover {
-    color: #ff1313;
+    color: #07a7d8;
     cursor: default;
 }
 .red {
@@ -126,4 +125,68 @@
 .red:hover {
     color: #1f7edd;
     cursor: default;
+}
+@media (max-width: 766px) {
+    .hero p {
+        font-size: 15px;
+    }
+    .hero h1 {
+        font-size: 38px;
+    }
+}
+@media (max-width: 999px) {
+    #intro img {
+        max-width: 100%;
+    }
+}
+@media (max-width: 766px) {
+    .from-idea-to-product img {
+        max-height: 200px;
+    }
+}
+@media (max-width: 999px) {
+    #intro .pull-right, #intro .text-right {
+        text-align: center;
+        float: none!important;
+        width: auto;
+    }
+}
+@-webkit-keyframes bounce{
+    from,to{
+        -webkit-transform: translateY(16px);
+        transform:translateY(16px)
+    }
+    80%{
+        -webkit-transform: translateY(8px);
+        transform:translateY(8px)
+    }
+}
+@keyframes bounce {
+    from,to {
+        -webkit-transform: translateY(16px);
+        transform:translateY(16px)
+    }
+    80% {
+        -webkit-transform:translateY(8px);
+        transform:translateY(8px)
+    }
+}
+.bottom-cta .container {
+    padding: 140px 0;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.bottom-cta .container a, .bottom-cta .container h2 {
+    display: inline-block;
+    margin: 0 30px;
+}
+.white {
+    background: #ffffff;
+}
+.work-carousel-container {
+    padding: 55px 15px 75px 15px;
 }

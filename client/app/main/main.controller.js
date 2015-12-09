@@ -8,7 +8,7 @@ angular.module('hackLogicaApp').controller('MainCtrl', function ($scope, $http, 
     $scope.myInterval = 5000;
     $scope.slides = [
       {
-        image: 'assets/images/hero-illustration-1.svg'
+        image: 'assets/images/thumbs/thumb1.jpg'
       },
       {
         image: 'assets/images/hero-illustration-2.svg'
