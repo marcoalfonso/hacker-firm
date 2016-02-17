@@ -106,6 +106,15 @@ a {
     color: #1f7edd;
     text-decoration: none;
 }
+h1.large-heading {
+    margin-top: 0;
+    color: #282828;
+    font-size: 60px;
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+}
 .btn {
     font-size: 11px;
     font-weight: 700;
@@ -140,17 +149,17 @@ a {
     }
 }
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: #1f7edd;
+    background-color: #0288bb;
     height: 4px;
 }
 .navbar-default .navbar-toggle .icon-bar:hover {
-    background-color: #428bca;
+    background-color: #07a7d8;
 }
 .navbar-default .navbar-toggle {
     border-color: transparent; 
 }
 .navbar-default .navbar-toggle:hover {
-    background-color: #deecfa;
+    background-color: transparent;
 }
 @media (max-width: 766px) {
     .navbar-default .navbar-collapse {
@@ -217,7 +226,18 @@ a {
     letter-spacing: .125em;
     text-transform: uppercase;
 }
-
+.legal-body {
+    margin-bottom: 75px;
+}
+.alert, .arrow, .carousel-indicators, .ribbon a, .subnav ul, .zigzag .header, footer.site-footer .social .btn, nav.site-header .navbar-center {
+    text-align: center;
+}
+.btn, .nav {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .125em;
+    text-transform: uppercase;
+}
 // injector
 @import 'account/login/login.less';
 @import 'admin/admin.less';
@@ -225,6 +245,8 @@ a {
 @import 'main/main.less';
 @import 'privacy/privacy.less';
 @import 'project/project.less';
+@import 'team/team.less';
 @import 'terms/terms.less';
+@import 'work/work.less';
 @import 'modal/modal.less';
 // endinjector
