@@ -16,7 +16,7 @@ angular.module('hackLogicaApp')
         .then( function() {
           // Logged in, redirect to chat
           User.get( function(response){
-            var userProjectId = response.projectId
+            var userProjectId = response.projectId;
             $location.path('/chat/' + userProjectId);
           });          
           

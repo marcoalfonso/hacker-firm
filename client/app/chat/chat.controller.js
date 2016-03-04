@@ -25,7 +25,7 @@ angular.module('hackLogicaApp')
       if($scope.newMessage === '') {
         return;
       }
-      $http.post('/api/messages', { message: $scope.newMessage, name: $scope.userName });
+      $http.post('/api/messages', { name: $scope.newMessage });
       $scope.newMessage = '';
     };
 
