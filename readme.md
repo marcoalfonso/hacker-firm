@@ -1,3 +1,3 @@
-Hack Logica App - Mean Stack
+The Hacker Firm App - Mean Stack
 
 Coded with ❤ by Marco Lavielle!

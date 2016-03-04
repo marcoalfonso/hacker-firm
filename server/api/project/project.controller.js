@@ -31,9 +31,9 @@ exports.create = function(req, res) {
 
   var welcomeEmail     = new sendgrid.Email({
     to:       req.body.email,
-    from:     'contact@hacklogica.com',
-    subject:  'Welcome to Hack Logica - Next Steps',
-    html: '<h1>Hack Logica</h1>'
+    from:     'hello@hackerfirm.com',
+    subject:  'Welcome to Hacker Firm - Next Steps',
+    html: '<h1>Hacker Firm</h1>'
   });
 
   welcomeEmail.setFilters({"templates": {"settings": {"enabled": 1, "template_id": "a9b91cfe-dc85-43ea-b346-e09e5ba72810"}}});
@@ -47,7 +47,7 @@ exports.create = function(req, res) {
   var projectRequestEmail     = new sendgrid.Email({
     to:       'marcoalfonso@gmail.com',
     from:     req.body.email,
-    subject:  'Hack Logica - New Project Request',
+    subject:  'Hacker Firm - New Project Request',
     html: '<h1>Congrats! A new project request</h1>'
   });
 
