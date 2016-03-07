@@ -1,0 +1,4 @@
+node_modules
+.tmp
+server/config/local.env.js
+dist

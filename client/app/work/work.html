@@ -1,0 +1,324 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+<div class="work">
+	<div class="container">
+		<div class="row hero work">
+			<div class="col-xs-12 col-md-6">
+				<h1>We've done incredible work for incredible people</h1>
+			</div>
+			<div class="hidden-xs hidden-sm col-md-6 text-right">
+				<div class="w90 pull-right max-width-100">
+					<img src="assets/images/devices.svg" width="100%" alt="We've done incredible work for incredible people">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="subnav sticky">
+		<ul class="nav">
+			<li class="active">
+				<a href="#testimonials">Testimonials</a>
+			</li>
+			<li class="">
+				<a href="#case-studies">Case Studies</a>
+			</li>
+		</ul>
+	</div>
+	<div id="testimonials" class="zigzag padding-lg gray">
+		<div class="container">
+			<div class="padding-xs header">
+				<h3>Testimonials</h3>
+				<p class="lead">You've heard it from us. Now hear it from our customers.</p>
+			</div>
+			<div class="padding-xs">
+				<div class="row">
+					<div class="col-xs-12 col-md-6">
+						<div id="todd-saunders" class="card testimonial">
+							<img src="assets/images/testimonial1.jpg" alt="Laurent Lambert, Co-Founder &amp; CEO of Ad-Roller">
+							<p>We have worked with the Hacker Firm for the past 6 months to build V1 of our product, and they did above and beyond what we were expecting. We have worked with other dev shops in the past where the communication is a major problem, however the Hacker Firm makes it super easy and they are always available to talk/walk you through what they are doing. Would highly recommend them!</p>
+							<footer><span class="name">Laurent Lambert</span><span class="position">Co-Founder &amp; CEO of Ad-Roller</span><!-- <img src="media/testimonials/adhawk.png?v=1450534596014"> --></footer>
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-6 pull-right">
+						<!-- <div id="michael-seibel" class="card testimonial switch">
+							<img src="media/testimonials/scott-slicho.jpg?v=1450534596014" alt="Scott Slicho, Sq1 - The Conversion Optimization Agency, Account Director">
+							<p>We have worked with the Hacker Firm for the past 6 months to build V1 of our product, and they did above and beyond what we were expecting. We have worked with other dev shops in the past where the communication is a major problem, however Gigster makes it super easy and they are always available to talk/walk you through what they are doing. Would highly recommend them!</p>
+							<footer>
+								<span class="name">Scott Slicho, Sq1 - The Conversion Optimization Agency</span><span class="position">Account Director</span>
+							</footer>
+						</div> -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="case-studies" class="zigzag padding-lg">
+		<div class="container">
+			<div class="padding-xs header">
+				<h3>Case Studies</h3>
+				<p class="lead">Our prior work speaks for itself.</p>
+			</div>
+			<div class="row padding-md">
+				<div class="col-md-6 col-md-push-6">
+					<h2>ING Direct</h2>
+					<h5>Banking Portal</h5>
+					<p class="padding-xs">Working on developing the front end of the new ING banking portal using web components technology for reusability. This banking portal will be used internationally once it is realeased in Australia.</p>
+					<div class="tech-info">
+						<div class="row">
+							<div class="col-sm-6">
+								<strong>Timeframe:</strong>
+							</div>
+							<div class="col-sm-6">
+								<p>Six months</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6">
+								<strong>Technologies:</strong>
+							</div>
+							<div class="col-sm-6">
+								<p>Polymer, HTML, CSS</p>
+							</div>
+						</div>
+					</div>
+					<a href="http://ingdirect.com.au/securebanking" target="_blank">Visit Site<i class="fa fa-angle-right read-more"></i></a>
+				</div>
+				<div class="col-md-6 col-md-pull-6">
+					<div class="wrap laptop pull-left">
+						<img src="assets/images/laptop-illustration.svg" width="500">
+						<carousel id="ing" interval="5000" data-ride="carousel" class="carousel slide">
+							<slide ng-repeat="ingSlide in ingSlides" active="ingSlide.active">
+					          	<img ng-src="{{ingSlide.image}}">
+					        </slide>
+						</carousel>
+					</div>
+				</div>
+			</div>
+			<div class="row padding-md">
+				<div class="col-md-6">
+					<h2>Service NSW</h2>
+					<h5>Goverment Portal</h5>
+					<p class="padding-xs">Developed the front end for the new goverment portal of New South Wales. The portal allows hundreds of thousands of users to do different goverment transactions i.e. checking their licence points.</p>
+					<div class="tech-info">
+						<div class="row">
+							<div class="col-sm-6">
+								<strong>Timeframe:</strong>
+							</div>
+							<div class="col-sm-6">
+								<p>Six months</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6">
+								<strong>Technologies:</strong>
+							</div>
+							<div class="col-sm-6">
+								<p>AngularJS, HTML, CSS</p>
+							</div>
+						</div>
+					</div>
+					<a href="http://service.nsw.gov.au" target="_blank">Visit Site<i class="fa fa-angle-right read-more"></i></a>
+				</div>
+				<div class="col-md-6">
+					<div class="wrap laptop pull-right">
+						<img src="assets/images/laptop-illustration.svg" width="500">
+						<carousel interval="myInterval">
+					        <slide ng-repeat="serviceNSWSlide in serviceNSWSlides" active="serviceNSWSlide.active">
+					          	<img ng-src="{{serviceNSWSlide.image}}">
+					        </slide>
+				      	</carousel>
+					</div>
+				</div>
+			</div>
+			<div class="row padding-md">
+				<div class="col-md-6 col-md-push-6">
+					<h2>Sydney Morning Herald</h2>
+					<h5>Online Newspaper</h5>
+					<p class="padding-xs">Created the front end of commercial widgets for the Sydney Morning Herald. The widgets allowed users to see advertisment of commercial properties and do searches.</p>
+					<div class="tech-info">
+						<div class="row">
+							<div class="col-sm-6">
+								<strong>Timeframe:</strong>
+							</div>
+							<div class="col-sm-6">
+								<p>One Month</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6">
+								<strong>Technologies:</strong>
+							</div>
+							<div class="col-sm-6">
+								<p>HTML, CSS, Jquery</p>
+							</div>
+						</div>
+					</div>
+					<a href="http://www.smh.com.au/" target="_blank">Visit Site<i class="fa fa-angle-right read-more"></i></a>
+				</div>
+				<div class="col-md-6 col-md-pull-6 padding-laptop">
+					<div class="wrap laptop">
+						<img src="assets/images/laptop-illustration.svg" width="500">
+						<!-- <img src="assets/images/thumbs/sydney_morning_herald.png">
+						<carousel id="clearear" interval="5000" data-ride="carousel" class="carousel slide">
+
+						</carousel> -->
+						<carousel interval="myInterval">
+					        <slide ng-repeat="smhSlide in smhSlides" active="smhSlide.active">
+					          	<img ng-src="{{smhSlide.image}}">
+					        </slide>
+				      	</carousel>
+					</div>
+				</div>
+			</div>
+			<div class="row padding-md">
+				<div class="col-md-6">
+					<h2>Commercial Real Estate</h2>
+					<h5>Real Estate Listings</h5>
+					<p class="padding-xs">We redesigned from the ground up the Commercial Real Estate front end. Rebuilt  from a static website into a single page application.</p>
+					<div class="tech-info">
+						<div class="row">
+							<div class="col-sm-6">
+								<strong>Timeframe:</strong>
+							</div>
+							<div class="col-sm-6">
+								<p>One Year</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6">
+								<strong>Technologies:</strong>
+							</div>
+							<div class="col-sm-6">
+								<p>KnockoutJS, HTML, CSS, C#</p>
+							</div>
+						</div>
+					</div>
+					<a href="http://www.commercialrealestate.com.au" target="_blank">Visit Site<i class="fa fa-angle-right read-more"></i></a>
+				</div>
+				<div class="col-md-6">
+					<div class="wrap laptop pull-right">
+						<img src="assets/images/laptop-illustration.svg" width="500">
+						<carousel interval="myInterval">
+					        <slide ng-repeat="creSlide in creSlides" active="creSlide.active">
+					          	<img ng-src="{{creSlide.image}}">
+					        </slide>
+				      	</carousel>
+					</div>
+				</div>
+			</div>
+			<div class="row padding-md">
+				<div class="col-md-6 col-md-push-6">
+					<h2>LawPath</h2>
+					<h5>Legal online platform</h5>
+					<p class="padding-xs">We developed Lawpath from MVP to the first round of funding. The application matches users with lawyers based on an algorythm.</p>
+					<div class="tech-info">
+						<div class="row">
+							<div class="col-sm-6">
+								<strong>Timeframe:</strong>
+							</div>
+							<div class="col-sm-6">
+								<p>Eight Months</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6">
+								<strong>Technologies:</strong>
+							</div>
+							<div class="col-sm-6">
+								<p>Ruby on Rails, HTML, CSS, AngularJS</p>
+							</div>
+						</div>
+					</div>
+					<a href="http://www.lawpath.com.au/" target="_blank">Visit Site<i class="fa fa-angle-right read-more"></i></a>
+				</div>
+				<div class="col-md-6 col-md-pull-6 padding-laptop">
+					<div class="wrap laptop">
+						<img src="assets/images/laptop-illustration.svg" width="500">
+						<carousel interval="myInterval">
+					        <slide ng-repeat="lawpathSlide in lawpathSlides" active="lawpathSlide.active">
+					          	<img ng-src="{{lawpathSlide.image}}">
+					        </slide>
+				      	</carousel>
+					</div>
+				</div>
+			</div>
+			<div class="row padding-md">
+				<div class="col-md-6">
+					<h2>Ad-Roller</h2>
+					<h5>Escalator Advertisment Website</h5>
+					<p class="padding-xs">Designed and developed sthe Ad-Roller website. Implemented their online marketing strategy as well.</p>
+					<div class="tech-info">
+						<div class="row">
+							<div class="col-sm-6">
+								<strong>Timeframe:</strong>
+							</div>
+							<div class="col-sm-6">
+								<p>Four weeks</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6">
+								<strong>Technologies:</strong>
+							</div>
+							<div class="col-sm-6">
+								<p>Wordpress, HTML, CSS</p>
+							</div>
+						</div>
+					</div>
+					<a href="http://www.ad-roller.com.au/" target="_blank">Visit Site<i class="fa fa-angle-right read-more"></i></a>
+				</div>
+				<div class="col-md-6">
+					<div class="wrap laptop pull-right">
+						<img src="assets/images/laptop-illustration.svg" width="500">
+						<carousel interval="myInterval">
+					        <slide ng-repeat="addRollerSlide in addRollerSlides" active="addRollerSlide.active">
+					          	<img ng-src="{{addRollerSlide.image}}">
+					        </slide>
+				      	</carousel>
+					</div>
+				</div>
+			</div>
+			<div class="row padding-md">
+				<div class="col-md-6 col-md-push-6">
+					<h2>A-Lift</h2>
+					<h5>Product Website</h5>
+					<p class="padding-xs">We designed and developed the A-Lift product website.</p>
+					<div class="tech-info">
+						<div class="row">
+							<div class="col-sm-6">
+								<strong>Timeframe:</strong>
+							</div>
+							<div class="col-sm-6">
+								<p>Two Weeks</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6">
+								<strong>Technologies:</strong>
+							</div>
+							<div class="col-sm-6">
+								<p>Wordpress, HTML, CSS</p>
+							</div>
+						</div>
+					</div>
+					<!-- <a href="http://www.alift.co/" target="_blank">Visit Site<i class="fa fa-angle-right read-more"></i></a> -->
+				</div>
+				<div class="col-md-6 col-md-pull-6 padding-laptop">
+					<div class="wrap laptop">
+						<img src="assets/images/laptop-illustration.svg" width="500">
+						<carousel interval="myInterval">
+					        <slide ng-repeat="aliftSlide in aliftSlides" active="aliftSlide.active">
+					          	<img ng-src="{{aliftSlide.image}}">
+					        </slide>
+				      	</carousel>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bottom-cta gray">
+	  <div class="container">
+	    <h2>Start Now!</h2>
+	    <a ui-sref="project" class="btn btn-primary btn-lg">Start a project</a>
+	  </div>
+	</div>
+</div>
+<div ng-include="'components/footer/footer.html'"></div>
