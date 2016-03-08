@@ -1,6 +1,10 @@
 'use strict';
 
 angular.module('hackLogicaApp').controller('MainCtrl', function ($scope, $http, socket, $state) {
+    particlesJS.load('particles-js', 'assets/images/particles.json', function() {
+      console.log('callback - particles.js config loaded');
+    });
+
     $scope.projectStart = function(){
       $state.go('project');
     };
