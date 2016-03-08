@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('hackLogicaApp').controller('ProjectCtrl', 
-  function ($scope, Auth, $location, $window, $http, $state, $window) {
+  function ($scope, Auth, $location, $window, $http, $state) {
 
   $scope.project = {};
   $scope.projectId = {};
@@ -25,7 +25,7 @@ angular.module('hackLogicaApp').controller('ProjectCtrl',
     $scope.transactionStep = step;
     $scope.showStep = step;
     $scope.transactionWidth = parseInt(initialTransactionWidth) * step;
-    $window.scrollTo(0, 0);
+    /*$window.scrollTo(0, 0);*/
   };
 
   $scope.user = {};
