@@ -36,7 +36,7 @@ exports.create = function(req, res) {
     html: '<h1>Hacker Firm</h1>'
   });
 
-  welcomeEmail.setFilters({"templates": {"settings": {"enabled": 1, "template_id": "a9b91cfe-dc85-43ea-b346-e09e5ba72810"}}});
+  welcomeEmail.setFilters({"templates": {"settings": {"enabled": 1, "template_id": "34b056ea-80d4-4583-b76b-6378bc90b09a"}}});
   welcomeEmail.addSubstitution(':name', req.body.username);
 
   sendgrid.send(welcomeEmail, function(err, json) {
@@ -51,7 +51,7 @@ exports.create = function(req, res) {
     html: '<h1>Congrats! A new project request</h1>'
   });
 
-  projectRequestEmail.setFilters({"templates": {"settings": {"enabled": 1, "template_id": "ec6894e5-f9b1-4192-a662-4354bc197b16"}}});
+  projectRequestEmail.setFilters({"templates": {"settings": {"enabled": 1, "template_id": "6388f985-8c24-4cd7-a047-8c75da6993a8"}}});
   projectRequestEmail.addSubstitution(':project_name', req.body.name);
   projectRequestEmail.addSubstitution(':terms_and_conditions', req.body.termsAndConditions);
   projectRequestEmail.addSubstitution(':budget', req.body.budget);
