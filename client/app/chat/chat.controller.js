@@ -14,6 +14,7 @@ angular.module('hackLogicaApp')
     User.get( function(response){ 
       $scope.userName = response.name;
       $scope.userId = response._id;
+      $scope.userEmail = response.email;
     });
 
     $http.get('/api/messages/').success(function(messages) {
@@ -25,7 +26,7 @@ angular.module('hackLogicaApp')
       if($scope.newMessage === '') {
         return;
       }
-      $http.post('/api/messages', { name: $scope.newMessage });
+      $http.post('/api/messages', { message: $scope.newMessage, name: $scope.userName, email: $scope.userEmail });
       $scope.newMessage = '';
     };
 

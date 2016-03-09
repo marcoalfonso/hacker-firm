@@ -30,21 +30,22 @@ exports.create = function(req, res) {
     return res.status(201).json(message);
   });
 
-  /*var userMessageEmail     = new sendgrid.Email({
+  var userMessageEmail     = new sendgrid.Email({
     to:       'marcoalfonso@gmail.com',
     from:     req.body.email,
     subject:  'Hacker Firm - New User Message',
     html: '<h1>A user has left you a message</h1>'
   });
 
-  userMessageEmail.setFilters({"templates": {"settings": {"enabled": 1, "template_id": "f2dae14b-8851-48fd-ba28-59fddf904e5d"}}});
+  userMessageEmail.setFilters({"templates": {"settings": {"enabled": 1, "template_id": "f7e8b34f-0ec7-46ec-9851-3af36b184877"}}});
   userMessageEmail.addSubstitution(':message', req.body.message);
   userMessageEmail.addSubstitution(':name', req.body.name);
+  userMessageEmail.addSubstitution(':email', req.body.email);
 
   sendgrid.send(userMessageEmail, function(err, json) {
     if (err) { return console.error(err); }
     console.log(json);
-  });*/
+  });
 };
 
 // Updates an existing message in the DB.
