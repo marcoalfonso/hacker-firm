@@ -24,8 +24,9 @@ angular.module('hackLogicaApp').controller('ProjectCtrl',
   $scope.goToStep = function(step) {
     $scope.transactionStep = step;
     $scope.showStep = step;
-    $scope.transactionWidth = parseInt(initialTransactionWidth) * step;
-    /*$window.scrollTo(0, 0);*/
+    $scope.transactionWidth = parseInt(initialTransactionWidth) * step + '%';
+    console.log($scope.transactionWidth);
+    $window.scrollTo(0, 0);
   };
 
   $scope.user = {};
