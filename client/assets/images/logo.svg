@@ -13,11 +13,15 @@
 	<g>
 	</g>
 </g>
-<polyline fill="#2EBADF" points="35.9,27 35.9,9.1 18.3,27 "/>
+<g>
+	<polygon fill="#2EBADF" points="35.9,27 18.3,27 35.9,9.1 	"/>
+</g>
+<g>
+	<path fill="#2EBADF" d="M53.6,9.1"/>
+</g>
 <g id="XMLID_2_">
 	<g>
-		<polygon fill="#D4EDF3" points="35.9,9.1 53.6,27 35.9,27 		"/>
-		<polygon fill="#2EBADF" points="35.9,9.1 35.9,27 18.3,27 		"/>
+		<polygon fill="#D4EDF3" points="53.6,9.1 35.9,27 35.9,9.1 		"/>
 	</g>
 	<g>
 	</g>

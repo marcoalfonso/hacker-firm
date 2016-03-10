@@ -5,7 +5,9 @@ var mongoose = require('mongoose'),
 	ObjectId = Schema.ObjectId;
 
 var MessageSchema = new Schema({
-  name: String, /* message */
+  message: { type: String, default: '' }, /* message */
+  name: { type: String, default: '' }, 
+  email: { type: String, default: '' },
   user: {
 	type: Schema.ObjectId,
 	ref: 'User'
