@@ -10,7 +10,7 @@ angular.module('hackLogicaApp')
 
     $scope.messages = [];
     $scope.userId = '';
-
+    console.log($scope.messages)
     User.get( function(response){ 
       $scope.userName = response.name;
       $scope.userId = response._id;
