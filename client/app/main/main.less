@@ -34,6 +34,11 @@
     margin-top: .75em;
     color: #fff;
 }
+@media (min-width: 1000px) {
+    .hero h1 {
+        font-size: 63px;
+    }
+}
 .hero p {
     font-size: 20px;
     margin: 1.5em 0 2em;
@@ -109,6 +114,16 @@
     background-color: #263846;
     background: linear-gradient( rgba(38, 56, 70, 0.999),rgba(23, 32, 38, 0.999) );
     max-height: 671px;
+}
+@media (max-width: 766px) {
+    #particles-js{
+        max-height: 500px;
+    }
+}
+@media (min-width: 767px) and (max-width: 999px) {
+    #particles-js{
+        max-height: 580px;
+    }
 }
 .index-hero {
     text-align: center;
