@@ -9,29 +9,10 @@
 						<div ng-style="{ 'width': transactionWidth}" class="progress-bar"></div>
 					</div>
 				</div>
-				<!-- STEP 1-->
-				<!-- <div ng-if="showStep !== 2 && showStep !== 3" class="step1 text-center">
-					<h1 class="padding-xs">Sign our Non-Disclosure Agreement</h1>
-					<form name="step1" novalidate="novalidate" autocomplete="off" class="">
-						<p class="lead gray-black">The confidentiality of your project is important to us.<br>By clicking accept, both you, and your company and<br>the Hacker Firm are agreeing to terms of an NDA to protect<br>all parties and materials disclosed.<br>To read all terms, &nbsp;<a href="" class="black-underline">click here</a>.</p>
-						<div class="padding-xs">
-							<div class="checkbox">
-								<input type="checkbox" name="nda" id="nda" class="no-float" ng-click="activateNextButton()" ng-model="project.termsAndConditions">
-								<label for="nda">I Agree to terms of the NDA</label>
-							</div>
-						</div>
-						<div class="padding-xs">
-							<button class="btn btn-primary fat ng-binding" ng-click="goToStep(2)" ng-if="!showNextButton">Skip<i class="gf-angle-right"></i></button>
-							<button class="btn btn-primary fat ng-binding" ng-click="goToStep(2)" ng-if="showNextButton" ng-click="">Next<i class="gf-angle-right"></i></button>
-						</div>
-					</form>
-				</div> -->
 			</div>
 		</div>
-		<!-- STEP 2-->
 		<div ng-if="showStep === 1" class="row step1">
 			<div class="col-sm-8 col-sm-push-2">
-				<!-- <div ng-controller="CreateGigCtrl" ng-include="'partials/templates/createGig'" hasprevious="true" class="ng-scope"> -->
 				<div hasprevious="true">
 					<h1 class="padding-xs text-center">Tell us about your project</h1>
 					<form name="createProject" novalidate="novalidate" autocomplete="off">
@@ -39,7 +20,6 @@
 							<label for="name">Project name<p class="error-block pull-right"></p></label>
 							<input type="text" placeholder="What is your project name." name="name" required="required" class="form-control" ng-model="project.name">
 						</div>
-						<!-- <div ng-class="{'has-error': signupForm.budget.err}" class="form-group"> -->
 						<div class="form-group">
 							<label for="budget">Budget<p class="error-block pull-right"></p></label>
 							<div class="select">
@@ -52,7 +32,6 @@
 								</select>
 							</div>
 						</div>
-						<!-- <div ng-class="{'has-error': signupForm.timeline.err}" class="form-group"> -->
 						<div class="form-group">
 							<label for="timeline">When do you want us to start<p class="error-block pull-right"></p></label>
 							<div class="select">
@@ -66,27 +45,22 @@
 								</select>
 							</div>
 						</div>
-						<!-- <div ng-class="{'has-error': signupForm.platforms.err}" class="form-group"> -->
 						<div class="form-group">
 							<label for="platform">Platform<p class="error-block pull-right"></p></label>
 							<div class="select">
 								<select class="form-control" ng-model="project.platforms">
 									<option value="" disabled selected>Select platform to build for.</option>
-	      							<option value="Oculus">Web</option>
-	      							<option value="Gear VR">Mobile</option>
-	      							<option value="AR">Virtual Reality</option>
-	      							<option value="other">Blockchain</option>
+	      							<option value="Web">Web</option>
+	      							<option value="Mobile">Mobile</option>
+	      							<option value="Virtual Reality">Virtual Reality</option>
+	      							<option value="Blockchain">Blockchain</option>
 								</select>
 							</div>
 						</div>
 						<footer class="row">
 							<div class="col-xs-6 text-right col-xs-push-6">
-								<!-- <button ng-click="next()" ng-class="{'disabled': !(canGoForward())}" class="btn fat btn-primary ng-binding disabled">Next<i class="gf-angle-right"></i></button> -->
 								<button ng-click="goToStep(2)" class="btn fat btn-primary">Next<i class="gf-angle-right"></i></button>
 							</div>
-							<!-- <div class="col-xs-6 text-left col-xs-pull-6">
-								<button ng-click="goToStep(1)" class="btn fat none ng-scope"><i class="fa fa-angle-left"></i>Previous</button>
-							</div> -->
 						</footer>
 					</form>
 				</div>
@@ -140,20 +114,12 @@
 				          </p>
 				        </div>
 			        	<footer class="row">
-							<div class="col-xs-6 text-right col-xs-push-6">
-								<!-- <button ng-click="next()" ng-class="{'disabled': !(canGoForward())}" class="btn fat btn-primary ng-binding disabled">Next<i class="gf-angle-right"></i></button> -->
-								<button type="submit" class="btn fat btn-primary">Sign up<i class="gf-angle-right"></i></button>
+							<div class="col-xs-6 text-right col-xs-push-6">								<button type="submit" class="btn fat btn-primary">Sign up<i class="gf-angle-right"></i></button>
 							</div>
 							<div class="col-xs-6 text-left col-xs-pull-6">
-								<!-- <button ng-click="previous()" ng-if="hasPrevious" class="btn fat none ng-scope"><i class="gf-angle-left"></i>Previous</button> -->
 								<button ng-click="goToStep(1)" class="btn fat none ng-scope"><i class="fa fa-angle-left"></i>Previous</button>
 							</div>
 						</footer>
-				        <!-- <div>
-				          <a class="btn btn-facebook" href="" ng-click="loginOauth('facebook')">
-				            <i class="fa fa-facebook"></i> Connect with Facebook
-				          </a>
-				        </div> -->
 				    </form>
 				</div>
 			</div>
